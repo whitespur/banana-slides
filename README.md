@@ -1,12 +1,35 @@
+<div align="center">
+
 # 🍌 蕉幻 (Banana Slides)
 
-一个基于AI的智能PPT生成工具，支持一句话生成完整PPT演示文稿。
+一个基于nano banana pro的智能PPT生成工具，支持一句话生成完整PPT演示文稿，自然语言修改直接修改ppt页面，实现“Vibe PPT”
+
+<p>
+  <a href="https://github.com/your-username/banana-slides/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
+  </a>
+  <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/React-18-blue?logo=react&logoColor=61DAFB" alt="React">
+  <img src="https://img.shields.io/badge/Flask-3.0-lightgrey?logo=flask&logoColor=black" alt="Flask">
+  <img src="https://img.shields.io/badge/TypeScript--blue?logo=typescript&logoColor=white" alt="TypeScript">
+  <a href="https://gemini.google.com/">
+    <img src="https://img.shields.io/badge/Powered_by-Gemini_AI-4A89F3?logo=google-gemini" alt="Powered by Gemini">
+  </a>
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome">
+</p>
+
+<img src="https://github.com/user-attachments/assets/7ddb6079-1633-456c-a933-e27a7f6e8c5c">
+
+</div>
+
+
+
 
 <img width="2086" height="1866" alt="image" src="https://github.com/user-attachments/assets/45283476-afb7-4aff-8154-15a0c0bc9174" />
 
 ## ✨ 项目简介
 
-蕉幻（Banana Slides）是一个 AI 原生的 PPT 生成应用，它利用大语言模型（Google Gemini）和文生图模型来自动化 PPT 制作流程。用户只需要提供一个简单的想法或大纲，系统就能自动生成包含精美设计的完整 PPT
+蕉幻（Banana Slides）是一个 AI 原生的 PPT 生成应用，它利用大语言模型和文生图模型来自动化 PPT 制作流程。用户只需要提供一个简单的想法或大纲，系统就能自动生成包含精美设计的完整 PPT
 
 ### 核心亮点
 
