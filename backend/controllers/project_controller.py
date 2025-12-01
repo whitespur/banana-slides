@@ -12,6 +12,33 @@ from datetime import datetime
 project_bp = Blueprint('projects', __name__, url_prefix='/api/projects')
 
 
+@project_bp.route('', methods=['GET'])
+def list_projects():
+    """
+    GET /api/projects - Get all projects (for history)
+    
+    Query params:
+    - limit: number of projects to return (default: 50)
+    - offset: offset for pagination (default: 0)
+    """
+    try:
+        from sqlalchemy import desc
+        
+        limit = request.args.get('limit', 50, type=int)
+        offset = request.args.get('offset', 0, type=int)
+        
+        # Get projects ordered by updated_at descending
+        projects = Project.query.order_by(desc(Project.updated_at)).limit(limit).offset(offset).all()
+        
+        return success_response({
+            'projects': [project.to_dict(include_pages=True) for project in projects],
+            'total': Project.query.count()
+        })
+    
+    except Exception as e:
+        return error_response('SERVER_ERROR', str(e), 500)
+
+
 @project_bp.route('', methods=['POST'])
 def create_project():
     """

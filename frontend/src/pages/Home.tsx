@@ -93,7 +93,9 @@ export const Home: React.FC = () => {
             <span className="text-xl font-bold text-gray-900">蕉幻</span>
           </div>
           <div className="flex items-center gap-4">
-            <Button variant="ghost" size="sm">历史项目</Button>
+            <Button variant="ghost" size="sm" onClick={() => navigate('/history')}>
+              历史项目
+            </Button>
             <Button variant="ghost" size="sm">帮助</Button>
           </div>
         </div>

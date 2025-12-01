@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Home } from './pages/Home';
+import { History } from './pages/History';
 import { OutlineEditor } from './pages/OutlineEditor';
 import { DetailEditor } from './pages/DetailEditor';
 import { SlidePreview } from './pages/SlidePreview';
@@ -30,6 +31,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/history" element={<History />} />
         <Route path="/project/:projectId/outline" element={<OutlineEditor />} />
         <Route path="/project/:projectId/detail" element={<DetailEditor />} />
         <Route path="/project/:projectId/preview" element={<SlidePreview />} />

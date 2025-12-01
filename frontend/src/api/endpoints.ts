@@ -42,10 +42,32 @@ export const uploadTemplate = async (
 };
 
 /**
+ * 获取项目列表（历史项目）
+ */
+export const listProjects = async (limit?: number, offset?: number): Promise<ApiResponse<{ projects: Project[]; total: number }>> => {
+  const params = new URLSearchParams();
+  if (limit !== undefined) params.append('limit', limit.toString());
+  if (offset !== undefined) params.append('offset', offset.toString());
+  
+  const queryString = params.toString();
+  const url = `/api/projects${queryString ? `?${queryString}` : ''}`;
+  const response = await apiClient.get<ApiResponse<{ projects: Project[]; total: number }>>(url);
+  return response.data;
+};
+
+/**
  * 获取项目详情
  */
 export const getProject = async (projectId: string): Promise<ApiResponse<Project>> => {
   const response = await apiClient.get<ApiResponse<Project>>(`/api/projects/${projectId}`);
+  return response.data;
+};
+
+/**
+ * 删除项目
+ */
+export const deleteProject = async (projectId: string): Promise<ApiResponse> => {
+  const response = await apiClient.delete<ApiResponse>(`/api/projects/${projectId}`);
   return response.data;
 };
 
