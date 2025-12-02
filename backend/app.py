@@ -72,7 +72,11 @@ def create_app():
     app.config['DEFAULT_RESOLUTION'] = "2K"
     
     # CORS configuration
-    cors_origins = os.getenv('CORS_ORIGINS', 'http://localhost:5173').split(',')
+    raw_cors = os.getenv('CORS_ORIGINS', 'http://localhost:5173')
+    if raw_cors.strip() == '*':
+        cors_origins = '*'
+    else:
+        cors_origins = [o.strip() for o in raw_cors.split(',') if o.strip()]
     app.config['CORS_ORIGINS'] = cors_origins
     
     # Initialize extensions
