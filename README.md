@@ -149,7 +149,7 @@ GOOGLE_API_BASE=https://generativelanguage.googleapis.com
 2. **启动服务**
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 3. **访问应用**
@@ -162,19 +162,19 @@ docker-compose up -d
 
 ```bash
 # 查看所有服务日志
-docker-compose logs -f
+docker compose logs -f
 
 # 查看后端日志
-docker-compose logs -f backend
+docker compose logs -f backend
 
 # 查看前端日志
-docker-compose logs -f frontend
+docker compose logs -f frontend
 ```
 
 5. **停止服务**
 
 ```bash
-docker-compose down
+docker compose down
 ```
 
 ### 从源码部署
@@ -343,7 +343,7 @@ banana-slides/
 ├── gemini_genai.py             # Gemini API封装（已集成）
 ├── pyproject.toml              # Python项目配置（使用 uv 管理依赖）
 ├── uv.lock                     # uv依赖锁定文件
-├── docker-compose.yml          # Docker Compose 配置
+├── docker compose.yml          # Docker Compose 配置
 ├── .dockerignore               # Docker 忽略文件
 ├── LICENSE                     # MIT许可证
 └── README.md                   # 本文件
