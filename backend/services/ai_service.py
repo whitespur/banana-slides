@@ -359,7 +359,8 @@ class AIService:
             has_material_images=has_material_images,
             extra_requirements=extra_requirements,
             language=language,
-            has_template=has_template
+            has_template=has_template,
+            page_index=page_index
         )
         
         return prompt

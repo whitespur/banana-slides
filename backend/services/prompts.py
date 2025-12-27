@@ -292,7 +292,8 @@ def get_image_generation_prompt(page_desc: str, outline_text: str,
                                 has_material_images: bool = False,
                                 extra_requirements: str = None,
                                 language: str = None,
-                                has_template: bool = True) -> str:
+                                has_template: bool = True,
+                                page_index: int = 1) -> str:
     """
     生成图片生成 prompt
     
@@ -351,6 +352,8 @@ def get_image_generation_prompt(page_desc: str, outline_text: str,
 </design_guidelines>
 {get_ppt_language_instruction(language)}
 {material_images_note}{extra_req_text}
+
+{"**注意：当前页面为ppt的封面页，请你采用专业的封面设计美学技巧，务必凸显出页面标题，分清主次，确保一下就能抓住观众的注意力。**" if page_index == 1 else ""}
 """)
     
     logger.debug(f"[get_image_generation_prompt] Final prompt:\n{prompt}")
